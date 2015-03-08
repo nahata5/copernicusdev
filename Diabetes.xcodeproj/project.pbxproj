@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1004C4A21AAB58DB002E92D6 /* TrackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1004C4A11AAB58DB002E92D6 /* TrackVC.swift */; };
+		1004C4A41AAB5997002E92D6 /* VidQVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1004C4A31AAB5997002E92D6 /* VidQVC.swift */; };
+		1004C4A61AAB59A2002E92D6 /* TextQVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1004C4A51AAB59A2002E92D6 /* TextQVC.swift */; };
+		1004C4A81AAB5CCE002E92D6 /* YoutubePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1004C4A71AAB5CCE002E92D6 /* YoutubePlayer.swift */; };
+		1004C4B01AAB6845002E92D6 /* YTPlayerView-iframe-player.html in Resources */ = {isa = PBXBuildFile; fileRef = 1004C4AD1AAB6845002E92D6 /* YTPlayerView-iframe-player.html */; };
+		1004C4B71AAB6AC3002E92D6 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1004C4B61AAB6AC3002E92D6 /* YTPlayerView.m */; };
+		1004C4B91AAB6D7A002E92D6 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1004C4B81AAB6D7A002E92D6 /* Question.swift */; };
+		1004C4BB1AACA614002E92D6 /* appIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1004C4BA1AACA614002E92D6 /* appIcon.png */; };
+		1004C4BE1AACAE4B002E92D6 /* OptionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1004C4BC1AACAE4B002E92D6 /* OptionButton.png */; };
+		1004C4BF1AACAE4B002E92D6 /* OptionSel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1004C4BD1AACAE4B002E92D6 /* OptionSel.png */; };
+		103456AE1A96DDD8000AD69C /* MedTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103456AD1A96DDD8000AD69C /* MedTable.swift */; };
+		103456B01A96E30D000AD69C /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103456AF1A96E30D000AD69C /* Medicine.swift */; };
+		1050694F1AA8DC0300687F80 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 1050694E1AA8DC0300687F80 /* camera.png */; };
+		105069521AA9406A00687F80 /* dpicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105069511AA9406A00687F80 /* dpicker.swift */; };
+		105069541AA9407E00687F80 /* weekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105069531AA9407E00687F80 /* weekView.swift */; };
+		105069561AA9530900687F80 /* dosesTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105069551AA9530900687F80 /* dosesTable.swift */; };
+		1063CA991A9D2E74002E0928 /* Border.png in Resources */ = {isa = PBXBuildFile; fileRef = 1063CA911A9D2E74002E0928 /* Border.png */; };
+		1063CA9A1A9D2E74002E0928 /* Border@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1063CA921A9D2E74002E0928 /* Border@2x.png */; };
+		1063CA9B1A9D2E74002E0928 /* BorderLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 1063CA931A9D2E74002E0928 /* BorderLeft.png */; };
+		1063CA9C1A9D2E74002E0928 /* BorderLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1063CA941A9D2E74002E0928 /* BorderLeft@2x.png */; };
+		1063CA9D1A9D2E74002E0928 /* BorderMid.png in Resources */ = {isa = PBXBuildFile; fileRef = 1063CA951A9D2E74002E0928 /* BorderMid.png */; };
+		1063CA9E1A9D2E74002E0928 /* BorderMid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1063CA961A9D2E74002E0928 /* BorderMid@2x.png */; };
+		1063CA9F1A9D2E74002E0928 /* BorderRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 1063CA971A9D2E74002E0928 /* BorderRight.png */; };
+		1063CAA01A9D2E74002E0928 /* BorderRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1063CA981A9D2E74002E0928 /* BorderRight@2x.png */; };
+		107976891AA0F86F00329827 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10B04BDA1A9D172F00D1141A /* Raleway-ExtraLight.ttf */; };
+		1079768A1AA0F86F00329827 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10B04BDC1A9D172F00D1141A /* Raleway-Light.ttf */; };
+		1079768B1AA0F86F00329827 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10B04BDE1A9D172F00D1141A /* Raleway-Regular.ttf */; };
+		1079768C1AA0F86F00329827 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10B04BDF1A9D172F00D1141A /* Raleway-SemiBold.ttf */; };
+		1079768D1AA0F86F00329827 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10B04BE01A9D172F00D1141A /* Raleway-Thin.ttf */; };
+		107BBCCD1A94DC0E0084F1CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107BBCCC1A94DC0E0084F1CF /* AppDelegate.swift */; };
+		107BBCCF1A94DC0E0084F1CF /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107BBCCE1A94DC0E0084F1CF /* HomeVC.swift */; };
+		107BBCD11A94DC0E0084F1CF /* MedicineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107BBCD01A94DC0E0084F1CF /* MedicineVC.swift */; };
+		107BBCD61A94DC0E0084F1CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 107BBCD51A94DC0E0084F1CF /* Images.xcassets */; };
+		107BBCD91A94DC0E0084F1CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107BBCD71A94DC0E0084F1CF /* LaunchScreen.xib */; };
+		107BBCE51A94DC0F0084F1CF /* DiabetesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107BBCE41A94DC0F0084F1CF /* DiabetesTests.swift */; };
+		107BBCF51A94DE230084F1CF /* Pill@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 107BBCF31A94DE230084F1CF /* Pill@2x.png */; };
+		107BBCF91A94DE9D0084F1CF /* Pill.png in Resources */ = {isa = PBXBuildFile; fileRef = 107BBCF81A94DE9D0084F1CF /* Pill.png */; };
+		10A6DB3C1A9500B4006AE55C /* NewMed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6DB3B1A9500B4006AE55C /* NewMed.swift */; };
+		10B04BD61A9D0FC500D1141A /* Box.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B04BD51A9D0FC500D1141A /* Box.png */; };
+		10B989B31A9672B100052CC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B989B21A9672B100052CC9 /* Main.storyboard */; };
+		10B989B61A96CD5700052CC9 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B989B51A96CD5700052CC9 /* TabController.swift */; };
+		10F03C601A94FBDF0058C2C2 /* MedNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F03C5F1A94FBDF0058C2C2 /* MedNavController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		107BBCDF1A94DC0F0084F1CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 107BBCBF1A94DC0E0084F1CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 107BBCC61A94DC0E0084F1CF;
+			remoteInfo = Diabetes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1004C4A11AAB58DB002E92D6 /* TrackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackVC.swift; sourceTree = "<group>"; };
+		1004C4A31AAB5997002E92D6 /* VidQVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VidQVC.swift; sourceTree = "<group>"; };
+		1004C4A51AAB59A2002E92D6 /* TextQVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextQVC.swift; sourceTree = "<group>"; };
+		1004C4A71AAB5CCE002E92D6 /* YoutubePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubePlayer.swift; sourceTree = "<group>"; };
+		1004C4AD1AAB6845002E92D6 /* YTPlayerView-iframe-player.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "YTPlayerView-iframe-player.html"; sourceTree = "<group>"; };
+		1004C4B41AAB68FC002E92D6 /* Diabetes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Diabetes-Bridging-Header.h"; sourceTree = "<group>"; };
+		1004C4B51AAB6AC3002E92D6 /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
+		1004C4B61AAB6AC3002E92D6 /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
+		1004C4B81AAB6D7A002E92D6 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		1004C4BA1AACA614002E92D6 /* appIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon.png; sourceTree = "<group>"; };
+		1004C4BC1AACAE4B002E92D6 /* OptionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OptionButton.png; path = ../../../IMG/OptionButton.png; sourceTree = "<group>"; };
+		1004C4BD1AACAE4B002E92D6 /* OptionSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OptionSel.png; path = ../../../IMG/OptionSel.png; sourceTree = "<group>"; };
+		103456AD1A96DDD8000AD69C /* MedTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedTable.swift; sourceTree = "<group>"; };
+		103456AF1A96E30D000AD69C /* Medicine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
+		1050694E1AA8DC0300687F80 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		105069511AA9406A00687F80 /* dpicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dpicker.swift; sourceTree = "<group>"; };
+		105069531AA9407E00687F80 /* weekView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weekView.swift; sourceTree = "<group>"; };
+		105069551AA9530900687F80 /* dosesTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dosesTable.swift; sourceTree = "<group>"; };
+		1063CA911A9D2E74002E0928 /* Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Border.png; sourceTree = "<group>"; };
+		1063CA921A9D2E74002E0928 /* Border@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Border@2x.png"; sourceTree = "<group>"; };
+		1063CA931A9D2E74002E0928 /* BorderLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BorderLeft.png; sourceTree = "<group>"; };
+		1063CA941A9D2E74002E0928 /* BorderLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BorderLeft@2x.png"; sourceTree = "<group>"; };
+		1063CA951A9D2E74002E0928 /* BorderMid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BorderMid.png; sourceTree = "<group>"; };
+		1063CA961A9D2E74002E0928 /* BorderMid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BorderMid@2x.png"; sourceTree = "<group>"; };
+		1063CA971A9D2E74002E0928 /* BorderRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BorderRight.png; sourceTree = "<group>"; };
+		1063CA981A9D2E74002E0928 /* BorderRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BorderRight@2x.png"; sourceTree = "<group>"; };
+		107BBCC71A94DC0E0084F1CF /* Diabetes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diabetes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		107BBCCB1A94DC0E0084F1CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		107BBCCC1A94DC0E0084F1CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		107BBCCE1A94DC0E0084F1CF /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		107BBCD01A94DC0E0084F1CF /* MedicineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineVC.swift; sourceTree = "<group>"; };
+		107BBCD51A94DC0E0084F1CF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		107BBCD81A94DC0E0084F1CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		107BBCDE1A94DC0F0084F1CF /* DiabetesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiabetesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		107BBCE31A94DC0F0084F1CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		107BBCE41A94DC0F0084F1CF /* DiabetesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabetesTests.swift; sourceTree = "<group>"; };
+		107BBCF31A94DE230084F1CF /* Pill@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pill@2x.png"; path = "../../../IMG/Pill@2x.png"; sourceTree = "<group>"; };
+		107BBCF81A94DE9D0084F1CF /* Pill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pill.png; path = ../../../IMG/Pill.png; sourceTree = "<group>"; };
+		10A6DB3B1A9500B4006AE55C /* NewMed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMed.swift; sourceTree = "<group>"; };
+		10B04BD51A9D0FC500D1141A /* Box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Box.png; path = ../../../IMG/Box.png; sourceTree = "<group>"; };
+		10B04BDA1A9D172F00D1141A /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
+		10B04BDC1A9D172F00D1141A /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
+		10B04BDE1A9D172F00D1141A /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		10B04BDF1A9D172F00D1141A /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		10B04BE01A9D172F00D1141A /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
+		10B989B21A9672B100052CC9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		10B989B51A96CD5700052CC9 /* TabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
+		10F03C5F1A94FBDF0058C2C2 /* MedNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedNavController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		107BBCC41A94DC0E0084F1CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		107BBCDB1A94DC0F0084F1CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1004C4AB1AAB682A002E92D6 /* Youtube */ = {
+			isa = PBXGroup;
+			children = (
+				1004C4AC1AAB6845002E92D6 /* Assets */,
+			);
+			name = Youtube;
+			sourceTree = "<group>";
+		};
+		1004C4AC1AAB6845002E92D6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				1004C4AD1AAB6845002E92D6 /* YTPlayerView-iframe-player.html */,
+			);
+			name = Assets;
+			path = "../../../../../Downloads/youtube-ios-player-helper-master/Assets";
+			sourceTree = "<group>";
+		};
+		103456AC1A96DB17000AD69C /* PointsTab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PointsTab;
+			sourceTree = "<group>";
+		};
+		105069501AA9405B00687F80 /* Special Classes */ = {
+			isa = PBXGroup;
+			children = (
+				105069551AA9530900687F80 /* dosesTable.swift */,
+				105069511AA9406A00687F80 /* dpicker.swift */,
+				105069531AA9407E00687F80 /* weekView.swift */,
+			);
+			name = "Special Classes";
+			sourceTree = "<group>";
+		};
+		107BBCBE1A94DC0E0084F1CF = {
+			isa = PBXGroup;
+			children = (
+				1004C4B51AAB6AC3002E92D6 /* YTPlayerView.h */,
+				1004C4B61AAB6AC3002E92D6 /* YTPlayerView.m */,
+				1004C4B41AAB68FC002E92D6 /* Diabetes-Bridging-Header.h */,
+				107BBCC91A94DC0E0084F1CF /* Diabetes */,
+				107BBCE11A94DC0F0084F1CF /* DiabetesTests */,
+				107BBCC81A94DC0E0084F1CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		107BBCC81A94DC0E0084F1CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				107BBCC71A94DC0E0084F1CF /* Diabetes.app */,
+				107BBCDE1A94DC0F0084F1CF /* DiabetesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		107BBCC91A94DC0E0084F1CF /* Diabetes */ = {
+			isa = PBXGroup;
+			children = (
+				107BBCCC1A94DC0E0084F1CF /* AppDelegate.swift */,
+				10B989B51A96CD5700052CC9 /* TabController.swift */,
+				10A6DB3A1A950025006AE55C /* HomeTab */,
+				10A6DB391A950014006AE55C /* MedicineTab */,
+				10B989B41A96C42100052CC9 /* TrackTab */,
+				103456AC1A96DB17000AD69C /* PointsTab */,
+				107BBCD51A94DC0E0084F1CF /* Images.xcassets */,
+				107BBCF01A94DDFD0084F1CF /* Images */,
+				107BBCD71A94DC0E0084F1CF /* LaunchScreen.xib */,
+				10B989B21A9672B100052CC9 /* Main.storyboard */,
+				107BBCCA1A94DC0E0084F1CF /* Supporting Files */,
+			);
+			path = Diabetes;
+			sourceTree = "<group>";
+		};
+		107BBCCA1A94DC0E0084F1CF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				10B04BD71A9D171500D1141A /* Fonts */,
+				107BBCCB1A94DC0E0084F1CF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		107BBCE11A94DC0F0084F1CF /* DiabetesTests */ = {
+			isa = PBXGroup;
+			children = (
+				107BBCE41A94DC0F0084F1CF /* DiabetesTests.swift */,
+				107BBCE21A94DC0F0084F1CF /* Supporting Files */,
+			);
+			path = DiabetesTests;
+			sourceTree = "<group>";
+		};
+		107BBCE21A94DC0F0084F1CF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				107BBCE31A94DC0F0084F1CF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		107BBCF01A94DDFD0084F1CF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1004C4BC1AACAE4B002E92D6 /* OptionButton.png */,
+				1004C4BD1AACAE4B002E92D6 /* OptionSel.png */,
+				1050694E1AA8DC0300687F80 /* camera.png */,
+				10B04BD51A9D0FC500D1141A /* Box.png */,
+				1004C4BA1AACA614002E92D6 /* appIcon.png */,
+				10DA68361A9A95370023462B /* Border */,
+				107BBCF11A94DE060084F1CF /* Pill */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		107BBCF11A94DE060084F1CF /* Pill */ = {
+			isa = PBXGroup;
+			children = (
+				107BBCF81A94DE9D0084F1CF /* Pill.png */,
+				107BBCF31A94DE230084F1CF /* Pill@2x.png */,
+			);
+			name = Pill;
+			sourceTree = "<group>";
+		};
+		10A6DB391A950014006AE55C /* MedicineTab */ = {
+			isa = PBXGroup;
+			children = (
+				10F03C5F1A94FBDF0058C2C2 /* MedNavController.swift */,
+				107BBCD01A94DC0E0084F1CF /* MedicineVC.swift */,
+				103456AD1A96DDD8000AD69C /* MedTable.swift */,
+				103456AF1A96E30D000AD69C /* Medicine.swift */,
+				10A6DB3B1A9500B4006AE55C /* NewMed.swift */,
+				105069501AA9405B00687F80 /* Special Classes */,
+			);
+			name = MedicineTab;
+			sourceTree = "<group>";
+		};
+		10A6DB3A1A950025006AE55C /* HomeTab */ = {
+			isa = PBXGroup;
+			children = (
+				107BBCCE1A94DC0E0084F1CF /* HomeVC.swift */,
+			);
+			name = HomeTab;
+			sourceTree = "<group>";
+		};
+		10B04BD71A9D171500D1141A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				10B04BDA1A9D172F00D1141A /* Raleway-ExtraLight.ttf */,
+				10B04BDC1A9D172F00D1141A /* Raleway-Light.ttf */,
+				10B04BDE1A9D172F00D1141A /* Raleway-Regular.ttf */,
+				10B04BDF1A9D172F00D1141A /* Raleway-SemiBold.ttf */,
+				10B04BE01A9D172F00D1141A /* Raleway-Thin.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		10B989B41A96C42100052CC9 /* TrackTab */ = {
+			isa = PBXGroup;
+			children = (
+				1004C4A11AAB58DB002E92D6 /* TrackVC.swift */,
+				1004C4A31AAB5997002E92D6 /* VidQVC.swift */,
+				1004C4B81AAB6D7A002E92D6 /* Question.swift */,
+				1004C4AB1AAB682A002E92D6 /* Youtube */,
+				1004C4A51AAB59A2002E92D6 /* TextQVC.swift */,
+				1004C4A71AAB5CCE002E92D6 /* YoutubePlayer.swift */,
+			);
+			name = TrackTab;
+			sourceTree = "<group>";
+		};
+		10DA68361A9A95370023462B /* Border */ = {
+			isa = PBXGroup;
+			children = (
+				1063CA911A9D2E74002E0928 /* Border.png */,
+				1063CA921A9D2E74002E0928 /* Border@2x.png */,
+				1063CA931A9D2E74002E0928 /* BorderLeft.png */,
+				1063CA941A9D2E74002E0928 /* BorderLeft@2x.png */,
+				1063CA951A9D2E74002E0928 /* BorderMid.png */,
+				1063CA961A9D2E74002E0928 /* BorderMid@2x.png */,
+				1063CA971A9D2E74002E0928 /* BorderRight.png */,
+				1063CA981A9D2E74002E0928 /* BorderRight@2x.png */,
+			);
+			name = Border;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		107BBCC61A94DC0E0084F1CF /* Diabetes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 107BBCE81A94DC0F0084F1CF /* Build configuration list for PBXNativeTarget "Diabetes" */;
+			buildPhases = (
+				107BBCC31A94DC0E0084F1CF /* Sources */,
+				107BBCC41A94DC0E0084F1CF /* Frameworks */,
+				107BBCC51A94DC0E0084F1CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Diabetes;
+			productName = Diabetes;
+			productReference = 107BBCC71A94DC0E0084F1CF /* Diabetes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		107BBCDD1A94DC0F0084F1CF /* DiabetesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 107BBCEB1A94DC0F0084F1CF /* Build configuration list for PBXNativeTarget "DiabetesTests" */;
+			buildPhases = (
+				107BBCDA1A94DC0F0084F1CF /* Sources */,
+				107BBCDB1A94DC0F0084F1CF /* Frameworks */,
+				107BBCDC1A94DC0F0084F1CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				107BBCE01A94DC0F0084F1CF /* PBXTargetDependency */,
+			);
+			name = DiabetesTests;
+			productName = DiabetesTests;
+			productReference = 107BBCDE1A94DC0F0084F1CF /* DiabetesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		107BBCBF1A94DC0E0084F1CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Jeet Patel";
+				TargetAttributes = {
+					107BBCC61A94DC0E0084F1CF = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					107BBCDD1A94DC0F0084F1CF = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 107BBCC61A94DC0E0084F1CF;
+					};
+				};
+			};
+			buildConfigurationList = 107BBCC21A94DC0E0084F1CF /* Build configuration list for PBXProject "Diabetes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 107BBCBE1A94DC0E0084F1CF;
+			productRefGroup = 107BBCC81A94DC0E0084F1CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				107BBCC61A94DC0E0084F1CF /* Diabetes */,
+				107BBCDD1A94DC0F0084F1CF /* DiabetesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		107BBCC51A94DC0E0084F1CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				107976891AA0F86F00329827 /* Raleway-ExtraLight.ttf in Resources */,
+				1079768A1AA0F86F00329827 /* Raleway-Light.ttf in Resources */,
+				1079768B1AA0F86F00329827 /* Raleway-Regular.ttf in Resources */,
+				1079768C1AA0F86F00329827 /* Raleway-SemiBold.ttf in Resources */,
+				1004C4BE1AACAE4B002E92D6 /* OptionButton.png in Resources */,
+				1004C4BF1AACAE4B002E92D6 /* OptionSel.png in Resources */,
+				1079768D1AA0F86F00329827 /* Raleway-Thin.ttf in Resources */,
+				1004C4B01AAB6845002E92D6 /* YTPlayerView-iframe-player.html in Resources */,
+				1063CA9A1A9D2E74002E0928 /* Border@2x.png in Resources */,
+				1063CA9F1A9D2E74002E0928 /* BorderRight.png in Resources */,
+				1063CA9D1A9D2E74002E0928 /* BorderMid.png in Resources */,
+				107BBCF51A94DE230084F1CF /* Pill@2x.png in Resources */,
+				10B989B31A9672B100052CC9 /* Main.storyboard in Resources */,
+				1063CA9B1A9D2E74002E0928 /* BorderLeft.png in Resources */,
+				10B04BD61A9D0FC500D1141A /* Box.png in Resources */,
+				1063CAA01A9D2E74002E0928 /* BorderRight@2x.png in Resources */,
+				1063CA9C1A9D2E74002E0928 /* BorderLeft@2x.png in Resources */,
+				1050694F1AA8DC0300687F80 /* camera.png in Resources */,
+				107BBCF91A94DE9D0084F1CF /* Pill.png in Resources */,
+				1063CA991A9D2E74002E0928 /* Border.png in Resources */,
+				1004C4BB1AACA614002E92D6 /* appIcon.png in Resources */,
+				1063CA9E1A9D2E74002E0928 /* BorderMid@2x.png in Resources */,
+				107BBCD91A94DC0E0084F1CF /* LaunchScreen.xib in Resources */,
+				107BBCD61A94DC0E0084F1CF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		107BBCDC1A94DC0F0084F1CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		107BBCC31A94DC0E0084F1CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				107BBCD11A94DC0E0084F1CF /* MedicineVC.swift in Sources */,
+				10B989B61A96CD5700052CC9 /* TabController.swift in Sources */,
+				1004C4A21AAB58DB002E92D6 /* TrackVC.swift in Sources */,
+				1004C4B91AAB6D7A002E92D6 /* Question.swift in Sources */,
+				1004C4A61AAB59A2002E92D6 /* TextQVC.swift in Sources */,
+				107BBCCD1A94DC0E0084F1CF /* AppDelegate.swift in Sources */,
+				1004C4A81AAB5CCE002E92D6 /* YoutubePlayer.swift in Sources */,
+				107BBCCF1A94DC0E0084F1CF /* HomeVC.swift in Sources */,
+				10A6DB3C1A9500B4006AE55C /* NewMed.swift in Sources */,
+				105069521AA9406A00687F80 /* dpicker.swift in Sources */,
+				105069541AA9407E00687F80 /* weekView.swift in Sources */,
+				103456AE1A96DDD8000AD69C /* MedTable.swift in Sources */,
+				1004C4A41AAB5997002E92D6 /* VidQVC.swift in Sources */,
+				10F03C601A94FBDF0058C2C2 /* MedNavController.swift in Sources */,
+				103456B01A96E30D000AD69C /* Medicine.swift in Sources */,
+				1004C4B71AAB6AC3002E92D6 /* YTPlayerView.m in Sources */,
+				105069561AA9530900687F80 /* dosesTable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		107BBCDA1A94DC0F0084F1CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				107BBCE51A94DC0F0084F1CF /* DiabetesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		107BBCE01A94DC0F0084F1CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 107BBCC61A94DC0E0084F1CF /* Diabetes */;
+			targetProxy = 107BBCDF1A94DC0F0084F1CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		107BBCD71A94DC0E0084F1CF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				107BBCD81A94DC0E0084F1CF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		107BBCE61A94DC0F0084F1CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		107BBCE71A94DC0F0084F1CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		107BBCE91A94DC0F0084F1CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Diabetes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Diabetes-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		107BBCEA1A94DC0F0084F1CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Diabetes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Diabetes-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		107BBCEC1A94DC0F0084F1CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DiabetesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Diabetes.app/Diabetes";
+			};
+			name = Debug;
+		};
+		107BBCED1A94DC0F0084F1CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DiabetesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Diabetes.app/Diabetes";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		107BBCC21A94DC0E0084F1CF /* Build configuration list for PBXProject "Diabetes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				107BBCE61A94DC0F0084F1CF /* Debug */,
+				107BBCE71A94DC0F0084F1CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		107BBCE81A94DC0F0084F1CF /* Build configuration list for PBXNativeTarget "Diabetes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				107BBCE91A94DC0F0084F1CF /* Debug */,
+				107BBCEA1A94DC0F0084F1CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		107BBCEB1A94DC0F0084F1CF /* Build configuration list for PBXNativeTarget "DiabetesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				107BBCEC1A94DC0F0084F1CF /* Debug */,
+				107BBCED1A94DC0F0084F1CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 107BBCBF1A94DC0E0084F1CF /* Project object */;
+}
