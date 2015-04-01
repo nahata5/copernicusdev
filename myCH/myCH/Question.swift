@@ -45,6 +45,7 @@ class questionView:NSObject, UITableViewDelegate,UITableViewDataSource {
             letter.sizeToFit()
             options.text = option[indexPath.row-1]
             options.lineBreakMode = NSLineBreakMode.ByWordWrapping
+            options.adjustsFontSizeToFitWidth = true
             options.numberOfLines = 0
             options.sizeToFit()
             letter.backgroundColor = UIColor(red: 35/255, green: 136/255, blue: 219/255, alpha: 1)
@@ -69,7 +70,7 @@ class questionView:NSObject, UITableViewDelegate,UITableViewDataSource {
 
         }
     }
-    func submit() {
+    func submit() ->Bool{
         println(selectedRow)
         if selectedRow != nil {
             var selectedCell = table!.cellForRowAtIndexPath(selectedRow!)! as UITableViewCell
@@ -81,6 +82,8 @@ class questionView:NSObject, UITableViewDelegate,UITableViewDataSource {
                 //(selectedCell.viewWithTag(2) as UILabel!).textColor = .greenColor()
                 letter.backgroundColor = .greenColor()
                 letter.textColor = .whiteColor()
+                table?.userInteractionEnabled = true
+                return true
             } else {
                 //(selectedCell.viewWithTag(1) as UILabel).text = "❌"
                 //(selectedCell.viewWithTag(2) as UILabel!).textColor = .redColor()
@@ -90,9 +93,11 @@ class questionView:NSObject, UITableViewDelegate,UITableViewDataSource {
                 (table!.cellForRowAtIndexPath(NSIndexPath(forRow: correctIndex, inSection: 0))?.viewWithTag(1) as UILabel).backgroundColor = .greenColor()
                 //(table!.cellForRowAtIndexPath(NSIndexPath(forRow: correctIndex, inSection: 0))?.viewWithTag(1) as UILabel).text = "✅"
                 //(table!.cellForRowAtIndexPath(NSIndexPath(forRow: correctIndex, inSection: 0))!.viewWithTag(2) as UILabel!).textColor = .greenColor()
+                table?.userInteractionEnabled = true
+                return false
             }
-                table?.userInteractionEnabled = false
         }
+        return false
     }
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         tableView.contentInset = UIEdgeInsetsZero
@@ -182,7 +187,7 @@ class txtQuestionView:NSObject, UITableViewDelegate,UITableViewDataSource {
             
         }
     }
-    func submit() {
+    func submit() -> Bool {
         println(selectedRow)
         if selectedRow != nil {
             var selectedCell = table!.cellForRowAtIndexPath(selectedRow!)! as UITableViewCell
@@ -194,6 +199,8 @@ class txtQuestionView:NSObject, UITableViewDelegate,UITableViewDataSource {
                 //(selectedCell.viewWithTag(2) as UILabel!).textColor = .greenColor()
                 letter.backgroundColor = .greenColor()
                 letter.textColor = .whiteColor()
+                table?.userInteractionEnabled = false
+                return true
             } else {
                 //(selectedCell.viewWithTag(1) as UILabel).text = "❌"
                 //(selectedCell.viewWithTag(2) as UILabel!).textColor = .redColor()
@@ -203,9 +210,11 @@ class txtQuestionView:NSObject, UITableViewDelegate,UITableViewDataSource {
                 (table!.cellForRowAtIndexPath(NSIndexPath(forRow: correctIndex, inSection: 0))?.viewWithTag(1) as UILabel).backgroundColor = .greenColor()
                 //(table!.cellForRowAtIndexPath(NSIndexPath(forRow: correctIndex, inSection: 0))?.viewWithTag(1) as UILabel).text = "✅"
                 //(table!.cellForRowAtIndexPath(NSIndexPath(forRow: correctIndex, inSection: 0))!.viewWithTag(2) as UILabel!).textColor = .greenColor()
+                table?.userInteractionEnabled = true
+                return false
             }
-            table?.userInteractionEnabled = false
         }
+        return false
     }
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         tableView.contentInset = UIEdgeInsetsZero

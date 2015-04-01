@@ -5,9 +5,9 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Raleway-Regular.ttf">
-            <string>Raleway</string>
-            <string>Raleway</string>
+        <mutableArray key="Raleway-Light.ttf">
+            <string>Raleway-Light</string>
+            <string>Raleway-Light</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -19,21 +19,15 @@
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Copernicus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
                     <rect key="frame" x="20" y="312" width="441" height="21"/>
-                    <fontDescription key="fontDescription" name="Raleway" family="Raleway" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="39"/>
                     <color key="textColor" red="0.93772244453430176" green="0.95592480897903442" blue="0.99982261657714844" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Raleway" family="Raleway" pointSize="11"/>
-                    </variation>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Health" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="OiK-Tq-Z6m">
                     <rect key="frame" x="20" y="333" width="441" height="21"/>
-                    <fontDescription key="fontDescription" name="Raleway" family="Raleway" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="39"/>
                     <color key="textColor" red="0.93772244449999997" green="0.95592480899999999" blue="0.99982261660000005" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
-                    <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Raleway" family="Raleway" pointSize="11"/>
-                    </variation>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="manLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="did-NT-uQS">
                     <rect key="frame" x="120" y="70" width="240" height="240"/>
@@ -58,6 +52,11 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Kzo-t9-V3l"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="404" y="445"/>
         </view>
     </objects>

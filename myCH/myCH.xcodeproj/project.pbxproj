@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		100588871ACA35FC003CA13A /* level.png in Resources */ = {isa = PBXBuildFile; fileRef = 100588861ACA35FC003CA13A /* level.png */; };
+		100E33F11AC73DC000B1A696 /* tabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100E33F01AC73DC000B1A696 /* tabBarController.swift */; };
+		100E33F31AC77C2B00B1A696 /* cashOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100E33F21AC77C2B00B1A696 /* cashOutVC.swift */; };
+		100E33F51AC784D700B1A696 /* cardRedeemed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100E33F41AC784D600B1A696 /* cardRedeemed.swift */; };
+		10179F2D1AC6559300132921 /* pointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10179F2C1AC6559300132921 /* pointsView.swift */; };
 		10522B871AB499950074E7E0 /* DropDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 10522B861AB499950074E7E0 /* DropDown.png */; };
 		105D9E5F1AB62001009868A7 /* LabPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105D9E5E1AB62001009868A7 /* LabPage.swift */; };
 		105D9E621AB628AE009868A7 /* LabDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105D9E611AB628AE009868A7 /* LabDelegate.swift */; };
@@ -39,8 +44,6 @@
 		10D0E0491AB3B9BA00260524 /* MedTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D0E0441AB3B9BA00260524 /* MedTable.swift */; };
 		10D0E04A1AB3B9BA00260524 /* NewMed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D0E0451AB3B9BA00260524 /* NewMed.swift */; };
 		10D0E04C1AB3B9C200260524 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D0E04B1AB3B9C200260524 /* Question.swift */; };
-		10D0E0531AB3B9D200260524 /* VidQVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D0E0521AB3B9D200260524 /* VidQVC.swift */; };
-		10D0E0551AB3B9DB00260524 /* TextQVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D0E0541AB3B9DB00260524 /* TextQVC.swift */; };
 		10D0E05C1AB3BA9200260524 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10D0E05B1AB3BA9200260524 /* LaunchScreen.xib */; };
 		10D0E05E1AB3BABF00260524 /* dropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D0E05D1AB3BABF00260524 /* dropDown.swift */; };
 		10D0E0601AB3C08300260524 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10D0E04D1AB3B9CC00260524 /* Raleway-ExtraLight.ttf */; };
@@ -56,7 +59,6 @@
 		10E8D5691AB78C380070EFA7 /* RegistrationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8D5681AB78C380070EFA7 /* RegistrationPage.swift */; };
 		10E8D56B1AB7D4600070EFA7 /* divider.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E8D56A1AB7D4600070EFA7 /* divider.png */; };
 		10E8D56D1AB7F1F20070EFA7 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8D56C1AB7F1F20070EFA7 /* user.swift */; };
-		10EAB0121AB88DFB00A0EC09 /* badge.png in Resources */ = {isa = PBXBuildFile; fileRef = 10EAB0111AB88DFB00A0EC09 /* badge.png */; };
 		10F3381C1ABC96C300EC9009 /* Bar@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10F3380F1ABC96C300EC9009 /* Bar@1x.png */; };
 		10F3381D1ABC96C300EC9009 /* Bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10F338101ABC96C300EC9009 /* Bar@2x.png */; };
 		10F3381E1ABC96C300EC9009 /* Bar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10F338111ABC96C300EC9009 /* Bar@3x.png */; };
@@ -84,6 +86,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		100588861ACA35FC003CA13A /* level.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level.png; sourceTree = "<group>"; };
+		100E33F01AC73DC000B1A696 /* tabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tabBarController.swift; sourceTree = "<group>"; };
+		100E33F21AC77C2B00B1A696 /* cashOutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cashOutVC.swift; sourceTree = "<group>"; };
+		100E33F41AC784D600B1A696 /* cardRedeemed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardRedeemed.swift; sourceTree = "<group>"; };
+		10179F2C1AC6559300132921 /* pointsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pointsView.swift; sourceTree = "<group>"; };
 		10522B861AB499950074E7E0 /* DropDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DropDown.png; sourceTree = "<group>"; };
 		105D9E5E1AB62001009868A7 /* LabPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabPage.swift; sourceTree = "<group>"; };
 		105D9E611AB628AE009868A7 /* LabDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabDelegate.swift; sourceTree = "<group>"; };
@@ -126,8 +133,6 @@
 		10D0E04F1AB3B9CC00260524 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
 		10D0E0501AB3B9CC00260524 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
 		10D0E0511AB3B9CC00260524 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
-		10D0E0521AB3B9D200260524 /* VidQVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VidQVC.swift; sourceTree = "<group>"; };
-		10D0E0541AB3B9DB00260524 /* TextQVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextQVC.swift; sourceTree = "<group>"; };
 		10D0E05B1AB3BA9200260524 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		10D0E05D1AB3BABF00260524 /* dropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dropDown.swift; sourceTree = "<group>"; };
 		10D7DC101AB8A86E003285A5 /* generic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = generic.jpg; sourceTree = "<group>"; };
@@ -138,7 +143,6 @@
 		10E8D5681AB78C380070EFA7 /* RegistrationPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPage.swift; sourceTree = "<group>"; };
 		10E8D56A1AB7D4600070EFA7 /* divider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = divider.png; sourceTree = "<group>"; };
 		10E8D56C1AB7F1F20070EFA7 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
-		10EAB0111AB88DFB00A0EC09 /* badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge.png; sourceTree = "<group>"; };
 		10F3380F1ABC96C300EC9009 /* Bar@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bar@1x.png"; sourceTree = "<group>"; };
 		10F338101ABC96C300EC9009 /* Bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bar@2x.png"; sourceTree = "<group>"; };
 		10F338111ABC96C300EC9009 /* Bar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bar@3x.png"; sourceTree = "<group>"; };
@@ -221,9 +225,11 @@
 			isa = PBXGroup;
 			children = (
 				1081EB171AB3B8A900BEB2EC /* AppDelegate.swift */,
+				100E33F01AC73DC000B1A696 /* tabBarController.swift */,
+				10179F2C1AC6559300132921 /* pointsView.swift */,
 				10F338291ABC970500EC9009 /* Main.storyboard */,
-				10E8D5651AB76CA30070EFA7 /* LogInPage */,
 				10D0E05B1AB3BA9200260524 /* LaunchScreen.xib */,
+				10E8D5651AB76CA30070EFA7 /* LogInPage */,
 				10CD12221AB563DC00E035B1 /* Home */,
 				10D0E0581AB3BA2500260524 /* Schedule */,
 				10CD12231AB563E700E035B1 /* Track */,
@@ -237,8 +243,8 @@
 		1081EB151AB3B8A900BEB2EC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				100588861ACA35FC003CA13A /* level.png */,
 				10D7DC101AB8A86E003285A5 /* generic.jpg */,
-				10EAB0111AB88DFB00A0EC09 /* badge.png */,
 				10E8D56A1AB7D4600070EFA7 /* divider.png */,
 				10E8D5631AB764F80070EFA7 /* myCH.png */,
 				1071677F1ABCB8820038C4D0 /* manLogo.png */,
@@ -295,7 +301,6 @@
 				10CD0CAB1AB3E00500E035B1 /* selectType.swift */,
 				10CD0CA71AB3DC1D00E035B1 /* labForm.swift */,
 				10CD0CA91AB3DDBA00E035B1 /* DRApptForm.swift */,
-				1061F9591AB731E00049C31C /* EditEvent.swift */,
 			);
 			name = Tables;
 			sourceTree = "<group>";
@@ -304,6 +309,8 @@
 			isa = PBXGroup;
 			children = (
 				10D0E0391AB3B96800260524 /* HomeVC.swift */,
+				100E33F21AC77C2B00B1A696 /* cashOutVC.swift */,
+				100E33F41AC784D600B1A696 /* cardRedeemed.swift */,
 				10D7DC451AB90163003285A5 /* editProfile.swift */,
 			);
 			name = Home;
@@ -337,9 +344,7 @@
 		10D0E0571AB3BA0C00260524 /* Learn */ = {
 			isa = PBXGroup;
 			children = (
-				10D0E0521AB3B9D200260524 /* VidQVC.swift */,
 				10D0E03F1AB3B99D00260524 /* LearnVC.swift */,
-				10D0E0541AB3B9DB00260524 /* TextQVC.swift */,
 				10D0E04B1AB3B9C200260524 /* Question.swift */,
 			);
 			name = Learn;
@@ -353,6 +358,7 @@
 				10D0E0441AB3B9BA00260524 /* MedTable.swift */,
 				10D0E0411AB3B9BA00260524 /* EventTypes.swift */,
 				10D0E0451AB3B9BA00260524 /* NewMed.swift */,
+				1061F9591AB731E00049C31C /* EditEvent.swift */,
 				10CD0CA61AB3DC0B00E035B1 /* Tables */,
 				105D9E651AB72D2E009868A7 /* EditTable */,
 			);
@@ -468,7 +474,6 @@
 				10F338211ABC96C300EC9009 /* Cal@3x.png in Resources */,
 				10D0E0641AB3C08300260524 /* Raleway-Thin.ttf in Resources */,
 				10F338251ABC96C300EC9009 /* Home@3x.png in Resources */,
-				10EAB0121AB88DFB00A0EC09 /* badge.png in Resources */,
 				10D0E05C1AB3BA9200260524 /* LaunchScreen.xib in Resources */,
 				10F338271ABC96C300EC9009 /* Pencil@2x.png in Resources */,
 				1081EB211AB3B8A900BEB2EC /* Images.xcassets in Resources */,
@@ -479,6 +484,7 @@
 				10F338261ABC96C300EC9009 /* Pencil@1x.png in Resources */,
 				10D0E03E1AB3B99000260524 /* Info.plist in Resources */,
 				10522B871AB499950074E7E0 /* DropDown.png in Resources */,
+				100588871ACA35FC003CA13A /* level.png in Resources */,
 				10F338281ABC96C300EC9009 /* Pencil@3x.png in Resources */,
 				10F338241ABC96C300EC9009 /* Home@2x.png in Resources */,
 			);
@@ -515,12 +521,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				10A6BC461AB7509300896358 /* trackTable.swift in Sources */,
-				10D0E0531AB3B9D200260524 /* VidQVC.swift in Sources */,
 				10D0E0471AB3B9BA00260524 /* MedicineVC.swift in Sources */,
 				10D0E03C1AB3B96F00260524 /* medForm.swift in Sources */,
 				1081EB181AB3B8A900BEB2EC /* AppDelegate.swift in Sources */,
 				105D9E6F1AB72DD7009868A7 /* labEdit.swift in Sources */,
 				105D9E6D1AB72DD0009868A7 /* medEdit.swift in Sources */,
+				100E33F31AC77C2B00B1A696 /* cashOutVC.swift in Sources */,
+				10179F2D1AC6559300132921 /* pointsView.swift in Sources */,
 				109C4E411AB5E69A004ED932 /* newTrackInfo.swift in Sources */,
 				10D0E04A1AB3B9BA00260524 /* NewMed.swift in Sources */,
 				1061F95A1AB731E00049C31C /* EditEvent.swift in Sources */,
@@ -538,7 +545,9 @@
 				10D0E03A1AB3B96800260524 /* HomeVC.swift in Sources */,
 				10D0E0401AB3B99D00260524 /* LearnVC.swift in Sources */,
 				109C4E431AB60C44004ED932 /* TrackResults.swift in Sources */,
+				100E33F51AC784D700B1A696 /* cardRedeemed.swift in Sources */,
 				10CD0CA81AB3DC1D00E035B1 /* labForm.swift in Sources */,
+				100E33F11AC73DC000B1A696 /* tabBarController.swift in Sources */,
 				10CD0CAC1AB3E00500E035B1 /* selectType.swift in Sources */,
 				105D9E711AB72DE6009868A7 /* doctorEdit.swift in Sources */,
 				105D9E621AB628AE009868A7 /* LabDelegate.swift in Sources */,
@@ -546,7 +555,6 @@
 				105D9E641AB68772009868A7 /* verifyVC.swift in Sources */,
 				10D0E0491AB3B9BA00260524 /* MedTable.swift in Sources */,
 				10CD12251AB5682500E035B1 /* trackVC.swift in Sources */,
-				10D0E0551AB3B9DB00260524 /* TextQVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

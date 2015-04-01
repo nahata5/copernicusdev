@@ -119,6 +119,7 @@ class DRApptForm:NSObject,UITableViewDelegate,UITableViewDataSource, UITextField
         var submittable = true
         var name = ""
         var datess = NSDate(timeIntervalSinceNow: 0)
+        var type:DRType = .Regular
         var s = NSDateFormatter()
         for cells in table!.visibleCells() {
             if cells.reuseIdentifier == "name" {
@@ -137,10 +138,23 @@ class DRApptForm:NSObject,UITableViewDelegate,UITableViewDataSource, UITextField
                 var dateS = s.dateFromString(label.text!)!
                 datess = dateS
             }
+            if cells.reuseIdentifier == "type" {
+                var lab = cells.viewWithTag(2) as UILabel
+                switch lab.text! {
+                case "Regular":
+                    type = .Regular
+                case "Eye":
+                    type = .Eye
+                case "Foot":
+                    type = .Foot
+                default:
+                    type = .Regular
+                }
+            }
         }
         if submittable {
             println("Submitting Doctor \(name) for date \(s.stringFromDate(datess))")
-            var dr = DoctorAppointment(date: datess, name: name)
+            var dr = DoctorAppointment(date: datess, name: name, type: type)
             drVisit.append(dr)
         }
         return submittable

@@ -75,20 +75,25 @@ class NewMedVC: UIViewController {
     }
     
     func submitt() {
+        var root = self.navigationController!.parentViewController!.view
+        var points = pointsView(View: root)
         if selectType.selects == "Medicine" {
             if medDel.submit() {
                 self.navigationController!.popToRootViewControllerAnimated(true)
+                points.presentPoints(root, mainText: "+25")
             }
         }
         if selectType.selects == "Doctor" {
             if drDel.submit() {
                 self.navigationController!.popToRootViewControllerAnimated(true)
+                points.presentPoints(root, mainText: "+25")
                 drVisit.sort({$0.date.compare($1.date) == NSComparisonResult.OrderedAscending})
             }
         }
         if selectType.selects == "Lab" {
             if labDel.submit() {
                 self.navigationController!.popToRootViewControllerAnimated(true)
+                points.presentPoints(root, mainText: "+25")
                 labVist.sort({$0.date.compare($1.date) == NSComparisonResult.OrderedAscending})
             }
         }

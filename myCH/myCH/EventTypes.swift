@@ -28,14 +28,18 @@ class Medicine:NSObject {
         }
     }
 }
-
+enum DRType:String{
+    case Regular = "Regular", Foot = "Foot", Eye = "Eye"
+}
 class DoctorAppointment:NSObject {
     var doctorName:String
     var date:NSDate
-    init(date:NSDate, name:String) {
+    var type:DRType
+    init(date:NSDate, name:String,type:DRType) {
         var s = NSDateFormatter()
         s.dateFormat = "MM/dd/yy hh:mm a"
         self.date = date
+        self.type = type
         doctorName = name
         super.init()
     }

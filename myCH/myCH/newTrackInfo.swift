@@ -19,7 +19,10 @@ class newTrackInfo:UIViewController {
     }
     @IBAction func submit(sender: AnyObject) {
         if vitalsDel.submit(true) {
+            var root = (self.navigationController!.parentViewController! as UIViewController).view
             self.navigationController?.popToRootViewControllerAnimated(true)
+            var s = pointsView(View: root)
+            s.presentPoints(root, mainText: "+50")
         }
     }
     @IBOutlet var addLabs: UIButton!
@@ -46,7 +49,24 @@ class newTrackInfo:UIViewController {
     @IBAction func heightWeight(sender: AnyObject) {
         vitalsDel.changedHeightWeight(sender)
     }
-    
+    func switchChanged(notif:NSNotification) {
+        var s = notif.object as UISwitch
+        if s.on {
+            addLabs.hidden = false
+            addLabs.userInteractionEnabled = true
+            submitButton.hidden = true
+            submitButton.userInteractionEnabled = false
+            vitalsDel.rows = 7
+            vitalsTable.reloadData()
+        } else {
+            addLabs.hidden = true
+            addLabs.userInteractionEnabled = false
+            submitButton.hidden = false
+            submitButton.userInteractionEnabled = true
+            vitalsDel.rows = 5
+            vitalsTable.reloadData()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         vitalsTable.dataSource = vitalsDel
@@ -57,5 +77,6 @@ class newTrackInfo:UIViewController {
         addLabs.userInteractionEnabled = false
         submitButton.hidden = false
         submitButton.userInteractionEnabled = true
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchChanged:", name: "DidChangeMDVisit", object: nil)
     }
 }

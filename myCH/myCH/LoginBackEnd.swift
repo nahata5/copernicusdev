@@ -47,6 +47,7 @@ class LoginBackEnd {
                 var data = NSKeyedArchiver.archivedDataWithRootObject(user)
                 userdefaults.setObject(data, forKey: "currentUser")
                 currentUser = user
+                userdefaults.setBool(true, forKey: "isLoggedIn")
                 println("\(currentUser?.username)")
                 return true
             }

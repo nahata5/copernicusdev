@@ -95,6 +95,11 @@ class vitalsDelegate:NSObject,UITableViewDelegate,UITableViewDataSource {
             showTextField(cell!, _isNumber: true, _isDecimal: false)
         case 4:
             (cell?.viewWithTag(2) as UISwitch).setOn(!(cell?.viewWithTag(2) as UISwitch).on, animated: true)
+            NSNotificationCenter.defaultCenter().postNotificationName("DidChangeMDVisit", object: (cell?.viewWithTag(2) as UISwitch), userInfo: nil)
+        case 5:
+            (cell?.viewWithTag(2) as UISwitch).setOn(!(cell?.viewWithTag(2) as UISwitch).on, animated: true)
+        case 6:
+            (cell?.viewWithTag(2) as UISwitch).setOn(!(cell?.viewWithTag(2) as UISwitch).on, animated: true)
         default:
             println()
         }

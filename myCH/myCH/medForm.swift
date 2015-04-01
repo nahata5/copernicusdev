@@ -90,6 +90,8 @@ class dosesTable:NSObject,UITableViewDataSource,UITableViewDelegate, UITextField
             }
             dropDownView.addSubview(a)
             a.frame = CGRect(x: a.frame.minX, y: a.frame.minY, width: dropDownView.frame.width, height: dropDownView.frame.height)
+        case 200:
+            var cell = tableView.cellForRowAtIndexPath(indexPath)!
         case 2:
             var cell = tableView.cellForRowAtIndexPath(indexPath)!
             dropDownView = dropDown(forCell: cell, view: tableView.superview!, path: indexPath)
@@ -113,6 +115,9 @@ class dosesTable:NSObject,UITableViewDataSource,UITableViewDelegate, UITextField
             } else {
                 b.selectRow(0, inComponent: 0, animated: true)
             }
+            if(freqPickerDel.s[freqPickerDel.selected] == "As Needed") {
+                a.hidden = true
+            }
             dropDownView.addSubview(a)
             dropDownView.addSubview(b)
             a.frame = CGRect(x: a.frame.minX, y: a.frame.minY, width: dropDownView.frame.width/4, height: dropDownView.frame.height)
@@ -127,8 +132,8 @@ class dosesTable:NSObject,UITableViewDataSource,UITableViewDelegate, UITextField
             a.frame = CGRect(x: a.frame.minX, y: a.frame.minY, width: dropDownView.frame.width, height: dropDownView.frame.height)
             var s = NSDateFormatter()
             s.dateFormat = "hh:mm a"
-            a.setDate(s.dateFromString("12:00 AM")!, animated: true)
-            if((table?.cellForRowAtIndexPath(indexPath)?.viewWithTag(2) as UILabel).text != "12:00 AM") {
+            a.setDate(s.dateFromString("8:00 AM")!, animated: true)
+            if((table?.cellForRowAtIndexPath(indexPath)?.viewWithTag(2) as UILabel).text != "8:00 AM") {
                 a.setDate(s.dateFromString((table?.cellForRowAtIndexPath(indexPath)?.viewWithTag(2) as UILabel).text!)!, animated: true)
             }
             a.minuteInterval = 15
@@ -202,7 +207,7 @@ class dosesTable:NSObject,UITableViewDataSource,UITableViewDelegate, UITextField
                     name = l.text!
                 case "dosage":
                     var l = cells.viewWithTag(2)! as UILabel
-                    if    l.text!.stringByTrimmingCharactersInSet(.whitespaceCharacterSet()) == "" || l.text == "# of Pills" {
+                    if    l.text!.stringByTrimmingCharactersInSet(.whitespaceCharacterSet()) == "" || l.text == "# of Pills" || l.text == "1" {
                         cells.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.2)
                         submittable = false
                     }
@@ -269,25 +274,37 @@ class dosesTable:NSObject,UITableViewDataSource,UITableViewDelegate, UITextField
         default:
             l.text = "\(num) times \(fre.lowercaseString)"
         }
+        if((t.viewWithTag(1) as UIPickerView).hidden) {
+            l.text = "As Needed"
+        }
         rows = 3 + num.toInt()!
         table?.reloadData()
     }
     func freqChosen(notif:NSNotification) {
         var s = notif.userInfo! as [String:AnyObject]
         var t = notif.object as dropDown
-        
         var l = table!.cellForRowAtIndexPath(t.indexPath!)?.viewWithTag(2)! as UILabel
-        
-        var p2 = t.viewWithTag(1) as UIPickerView
-        var num = numPickerDel.s[p2.selectedRowInComponent(0)]
-        var fre = String(s["title"] as String)
-        switch num {
-        case 1:
-            l.text = "Once \(fre.lowercaseString)"
-        case 2:
-            l.text = "Twice \(fre.lowercaseString)"
-        default:
-            l.text = "\(num) times \(fre.lowercaseString)"
+        var num = numPickerDel.s[numPickerDel.selected]
+        var cell = table!.cellForRowAtIndexPath(t.indexPath!)?.viewWithTag(2)! as UILabel
+        var p = t.viewWithTag(2) as UIPickerView
+        var pp = t.viewWithTag(1) as UIPickerView
+        if(s["title"] as String == "As Needed"){
+            t.viewWithTag(1)?.hidden = true
+            rows = 3
+            table?.reloadData()
+            l.text = "As Needed"
+        } else {
+            t.viewWithTag(1)?.hidden = false
+            switch num {
+            case 1:
+                l.text = "Once \(freqPickerDel.s[freqPickerDel.selected])"
+            case 2:
+                l.text = "Twice \(freqPickerDel.s[freqPickerDel.selected])"
+            default:
+                l.text = "\(num) times \(freqPickerDel.s[freqPickerDel.selected])"
+            }
+            rows = 3 + numPickerDel.s[pp.selectedRowInComponent(0)]
+            table?.reloadData()
         }
     }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -351,10 +368,10 @@ class dosage:NSObject,UIPickerViewDataSource,UIPickerViewDelegate {
     
 }
 class freq:NSObject,UIPickerViewDataSource,UIPickerViewDelegate {
-    var s:[String] = ["Daily", "Weekly"]
+    var s:[String] = ["Daily", "Weekly", "As Needed"]
     var selected:Int = 0
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 2
+        return 3
     }
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1

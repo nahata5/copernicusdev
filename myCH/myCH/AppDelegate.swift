@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Fabric.with([Crashlytics()])
         //userdefaults.removePersistentDomainForName(NSBundle.mainBundle().bundleIdentifier!)
-        userdefaults.setBool(false, forKey: "isLoggedIn")
+        //userdefaults.setBool(false, forKey: "isLoggedIn")
         loginBE.setUpDB()
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
 

@@ -16,6 +16,8 @@ class labEdit:NSObject,UITableViewDelegate,UITableViewDataSource, UITextFieldDel
     var selectedIndex:NSIndexPath?
     var dismiss = UITapGestureRecognizer()
     var drop = dropDown()
+    var lab:LabVisit?
+    var hasLab:Bool = false
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
         switch indexPath.row {
@@ -25,11 +27,19 @@ class labEdit:NSObject,UITableViewDelegate,UITableViewDataSource, UITextFieldDel
             (cell.viewWithTag(3) as UITextField).delegate = self
             (cell.viewWithTag(2) as UILabel).text = "Enter Name"
             (cell.viewWithTag(3) as UITextField).userInteractionEnabled = false
+            (cell.viewWithTag(3) as UITextField).hidden = true
+            if hasLab {
+                (cell.viewWithTag(3) as UITextField).text = lab?.labName
+                (cell.viewWithTag(2) as UILabel).text = lab?.labName
+            }
         case 1:
             cell = tableView.dequeueReusableCellWithIdentifier("date") as UITableViewCell
             var s = NSDateFormatter()
             s.dateFormat = "MM/dd/yy hh:mm a"
             (cell.viewWithTag(2) as UILabel).text = s.stringFromDate(NSDate(timeIntervalSinceNow: 0))
+            if hasLab {
+                (cell.viewWithTag(2) as UILabel).text = s.stringFromDate(lab!.date)
+            }
         default:
             cell = tableView.dequeueReusableCellWithIdentifier("name") as UITableViewCell
         }
@@ -50,7 +60,7 @@ class labEdit:NSObject,UITableViewDelegate,UITableViewDataSource, UITextFieldDel
             dismiss = UITapGestureRecognizer(target: self, action: "resign:")
             tableView.superview?.addGestureRecognizer(dismiss)
             println(tableView.superview!.superview!)
-            (tableView.superview!.superview! as UIScrollView).setContentOffset(CGPoint(x: 0, y: c.frame.maxY), animated: true)
+
             selectedIndex = indexPath
         case 1:
             drop = dropDown(forCell: c, view: tableView.superview!, path: indexPath)
@@ -79,7 +89,6 @@ class labEdit:NSObject,UITableViewDelegate,UITableViewDataSource, UITextFieldDel
     func resign(sender:AnyObject){
         var s = table!.cellForRowAtIndexPath(selectedIndex!)!.viewWithTag(3) as UITextField
         var l = table!.cellForRowAtIndexPath(selectedIndex!)?.viewWithTag(2) as UILabel
-        (table!.superview?.superview! as UIScrollView).setContentOffset(CGPointZero, animated: true)
         l.hidden = false
         l.text = s.text
         s.hidden=true
@@ -129,15 +138,15 @@ class labEdit:NSObject,UITableViewDelegate,UITableViewDataSource, UITextFieldDel
                 s.dateFormat = "MM/dd/yy hh:mm a"
                 var dateS = s.dateFromString((cells.viewWithTag(2) as UILabel).text!)!
                 datess = dateS
-                if date.timeIntervalSinceDate(dateS) < 0{
-                    submittable = false
-                }
             }
         }
         if submittable {
             var lab = LabVisit(date: datess, lab: name)
+            labVist.removeAtIndex(0)
             labVist.append(lab)
+            labVist.sort({$0.date.compare($1.date) == NSComparisonResult.OrderedAscending})
         }
+        println(submittable)
         return submittable
     }
     

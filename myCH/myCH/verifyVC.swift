@@ -17,7 +17,10 @@ class verifyVC:UIViewController, UITableViewDataSource,UITableViewDelegate,UITex
     @IBAction func checkandRegister(sender: AnyObject) {
         if CodeField.text == "1234" {
             temporaryTrackResults.addToRecord()
+            var root = self.navigationController!.parentViewController!
             self.navigationController?.popToRootViewControllerAnimated(true)
+            var t = pointsView(View: root.view)
+            t.presentPoints(root.view, mainText: "+150")
         } else {
             CodeField.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.2)
         }

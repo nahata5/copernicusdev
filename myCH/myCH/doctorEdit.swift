@@ -15,6 +15,8 @@ class doctorEdit:NSObject,UITableViewDelegate,UITableViewDataSource, UITextField
     var selectedIndex:NSIndexPath?
     var dismiss = UITapGestureRecognizer()
     var drop = dropDown()
+    var doctor:DoctorAppointment?
+    var hasDoctor = false
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
         switch indexPath.row {
@@ -25,14 +27,25 @@ class doctorEdit:NSObject,UITableViewDelegate,UITableViewDataSource, UITextField
             (cell.viewWithTag(1) as UILabel).text = "Doctor"
             (cell.viewWithTag(2) as UILabel).text = "Enter Name"
             (cell.viewWithTag(3) as UITextField).userInteractionEnabled = false
+            if hasDoctor {
+                (cell.viewWithTag(2) as UILabel).text = doctor?.doctorName
+                (cell.viewWithTag(2) as UILabel).hidden = true
+                (cell.viewWithTag(3) as UITextField).text = doctor?.doctorName
+            }
         case 1:
             cell = tableView.dequeueReusableCellWithIdentifier("date") as UITableViewCell
             var s = NSDateFormatter()
             s.dateFormat = "MM/dd/yy hh:mm a"
             (cell.viewWithTag(2) as UILabel).text = s.stringFromDate(NSDate(timeIntervalSinceNow: 0))
+            if hasDoctor {
+                (cell.viewWithTag(2) as UILabel).text = s.stringFromDate(doctor!.date)
+            }
         case 2:
             cell = tableView.dequeueReusableCellWithIdentifier("type") as UITableViewCell
             (cell.viewWithTag(2) as UILabel).text = "Regular"
+            if hasDoctor {
+                (cell.viewWithTag(2) as UILabel).text = doctor!.type.rawValue
+            }
         default:
             cell = tableView.dequeueReusableCellWithIdentifier("name") as UITableViewCell
             (cell.viewWithTag(2) as UILabel).text = "Regular"
@@ -68,7 +81,6 @@ class doctorEdit:NSObject,UITableViewDelegate,UITableViewDataSource, UITextField
             (c.viewWithTag(3) as UITextField).becomeFirstResponder()
             (c.viewWithTag(3) as UITextField).addTarget(self, action: "resign:", forControlEvents: .TouchUpOutside)
             dismiss = UITapGestureRecognizer(target: self, action: "resign:")
-            (table!.superview?.superview! as UIScrollView).setContentOffset(CGPoint(x: 0, y: c.frame.maxY), animated: true)
             tableView.superview?.addGestureRecognizer(dismiss)
             selectedIndex = indexPath
         case 1:
@@ -102,7 +114,6 @@ class doctorEdit:NSObject,UITableViewDelegate,UITableViewDataSource, UITextField
         l.text = s.text
         s.hidden=true
         table?.superview?.removeGestureRecognizer(dismiss)
-        (table!.superview?.superview! as UIScrollView).setContentOffset(CGPointZero, animated: true)
         
         s.resignFirstResponder()
     }
@@ -126,7 +137,6 @@ class doctorEdit:NSObject,UITableViewDelegate,UITableViewDataSource, UITextField
         (table!.cellForRowAtIndexPath(selectedIndex!)!.viewWithTag(2) as UILabel).hidden = false
         textField.hidden = true
         table?.superview?.removeGestureRecognizer(dismiss)
-        (table!.superview?.superview! as UIScrollView).setContentOffset(CGPointZero, animated: true)
         
         return true
     }
@@ -136,6 +146,7 @@ class doctorEdit:NSObject,UITableViewDelegate,UITableViewDataSource, UITextField
         var name = ""
         var datess = NSDate(timeIntervalSinceNow: 0)
         var s = NSDateFormatter()
+        var type:DRType = .Regular
         for cells in table!.visibleCells() {
             if cells.reuseIdentifier == "name" {
                 var lab = cells.viewWithTag(2) as UILabel
@@ -153,11 +164,26 @@ class doctorEdit:NSObject,UITableViewDelegate,UITableViewDataSource, UITextField
                 var dateS = s.dateFromString(label.text!)!
                 datess = dateS
             }
+            if cells.reuseIdentifier == "type" {
+                var lab = cells.viewWithTag(2) as UILabel
+                switch lab.text! {
+                case "Regular":
+                    type = .Regular
+                case "Eye":
+                    type = .Eye
+                case "Foot":
+                    type = .Foot
+                default:
+                    println()
+                }
+            }
         }
         if submittable {
             println("Submitting Doctor \(name) for date \(s.stringFromDate(datess))")
-            var dr = DoctorAppointment(date: datess, name: name)
-            drVisit.append(dr)
+            var s  = drVisit.removeAtIndex(0)
+            s = DoctorAppointment(date: datess, name: name, type: type)
+            drVisit.append(s)
+            drVisit.sort({$0.date.compare($1.date) == NSComparisonResult.OrderedAscending})
         }
         return submittable
     }

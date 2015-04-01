@@ -20,7 +20,14 @@ class MedicineVC: UIViewController {
     @IBOutlet var labtime: UILabel!
     
     func setUpNextAppts() {
+        var fullTime = NSDateFormatter()
+        fullTime.dateFormat = "MM/dd/yy hh:mm a"
+        DoctorApptView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "selectDoctor"))
+        drVisit.append(DoctorAppointment(date: fullTime.dateFromString("09/15/15 10:30 AM")!, name: "Exam", type: .Regular))
+        labVist.append(LabVisit(date: fullTime.dateFromString("09/08/15 2:30 PM")!, lab: "Labcorp"))
+        LabApptView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "selectLab"))
         setUpDrLabView()
+
     }
     
     func setUpDrLabView() {
@@ -33,10 +40,6 @@ class MedicineVC: UIViewController {
         dateGetter.dateFormat = "dd"
         timeGetter.dateFormat = "hh:mm a"
 
-        DoctorApptView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "selectDoctor"))
-        drVisit.append(DoctorAppointment(date: fullTime.dateFromString("09/15/15 10:30 AM")!, name: "Exam"))
-        labVist.append(LabVisit(date: fullTime.dateFromString("09/08/15 2:30 PM")!, lab: "name"))
-        LabApptView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "selectLab"))
         var drDates = drVisit[0].date
         var labDates = labVist[0].date
         drMonth.text = monthGetter.stringFromDate(drDates)
@@ -82,7 +85,8 @@ class MedicineVC: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        setUpNextAppts()
+        println("appearing")
+        setUpDrLabView()
     }
     override func prefersStatusBarHidden() -> Bool {
         return false

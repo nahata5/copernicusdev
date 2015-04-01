@@ -193,6 +193,7 @@ class editProfile:UIViewController,UITableViewDelegate,UITableViewDataSource,UIT
         var height:Double?
         var submittable = true
         var cells = userRegistration.visibleCells() as [UITableViewCell]
+        view.endEditing(true)
         for cell in cells {
             switch cell.reuseIdentifier! {
             case "name":
@@ -203,6 +204,7 @@ class editProfile:UIViewController,UITableViewDelegate,UITableViewDataSource,UIT
                 } else {
                     name = label.text
                 }
+                println(name)
             case "address":
                 var label = cell.viewWithTag(2) as UITextField
                 if label.text == "" {
@@ -211,6 +213,7 @@ class editProfile:UIViewController,UITableViewDelegate,UITableViewDataSource,UIT
                 } else {
                     address = label.text
                 }
+                println(address)
             case "address2":
                 var c = cell.viewWithTag(1) as UITextField
                 var s = cell.viewWithTag(2) as UITextField
@@ -230,6 +233,7 @@ class editProfile:UIViewController,UITableViewDelegate,UITableViewDataSource,UIT
                 city = c.text
                 state = s.text
                 zipcode = z.text
+                println("\(city), \(state), \(zipcode)")
             case "doctor":
                 var label = cell.viewWithTag(2) as UITextField
                 if label.text == "" {
@@ -238,6 +242,7 @@ class editProfile:UIViewController,UITableViewDelegate,UITableViewDataSource,UIT
                 } else {
                     doctor = label.text
                 }
+                println(doctor)
             case "insurer":
                 var label = cell.viewWithTag(2) as UITextField
                 if label.text == "" {
@@ -246,6 +251,7 @@ class editProfile:UIViewController,UITableViewDelegate,UITableViewDataSource,UIT
                 } else {
                     insurer = label.text
                 }
+                println(insurer)
             case "username":
                 var label = cell.viewWithTag(2) as UITextField
                 if label.text == "" {
@@ -254,6 +260,7 @@ class editProfile:UIViewController,UITableViewDelegate,UITableViewDataSource,UIT
                 } else {
                     username = label.text
                 }
+                println(username)
             case "height":
                 var label = cell.viewWithTag(2) as UITextField
                 if label.text == "" {
@@ -262,6 +269,7 @@ class editProfile:UIViewController,UITableViewDelegate,UITableViewDataSource,UIT
                 } else {
                     height = NSString(string: label.text).doubleValue
                 }
+                println(height)
             default:
                 print()
             }

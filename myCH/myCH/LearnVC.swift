@@ -17,6 +17,7 @@ class LearnVC:UIViewController,UIWebViewDelegate {
     @IBOutlet var VidTextSwitch: UISegmentedControl!
     @IBOutlet var loading: UIActivityIndicatorView!
     @IBOutlet var textQTable: UITableView!
+    @IBOutlet var segmentedControl: UISegmentedControl!
     var vidTableDel = questionView()
     var txtTableDel = txtQuestionView()
     @IBAction func segment(sender: AnyObject) {
@@ -24,34 +25,60 @@ class LearnVC:UIViewController,UIWebViewDelegate {
         if s.selectedSegmentIndex == 1 {
             VidQues.hidden = false
             TextQues.hidden = true
-            webView.start(youtubeVid, width: view.frame.width, url: "https://www.youtube.com/embed/xWJdSIiFxM4?t=100?rel=0&amp;showinfo=0?feature=player_detailpage&playsinline=1")
+            youtubeVid.hidden = false
+            webView.start(youtubeVid, width: view.frame.width, url: "https://www.youtube.com/embed/rgNf8nsXA0Q?t=100?rel=0&amp;showinfo=0?feature=player_detailpage&playsinline=1")
         } else {
             TextQues.hidden = false
+            TextQues.backgroundColor = .whiteColor()
             VidQues.hidden = true
+            youtubeVid.hidden = true
             youtubeVid.stringByEvaluatingJavaScriptFromString("var videos = document.querySelectorAll(\"video\"); for (var i = videos.length - 1; i >= 0; i--) { videos[i].pause(); };")
             youtubeVid.stopLoading()
+            youtubeVid.loadHTMLString("", baseURL: nil)
         }
+    }
+    @IBAction func openSource(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "http://www.cdc.gov/diabetes/living/problems.html")!)
     }
     @IBAction func submit(sender: AnyObject) {
         var send = sender as UIButton
         if VidTextSwitch.selectedSegmentIndex == 1 {
-            vidTableDel.submit()
+            if vidTableDel.submit() {
+                var t = pointsView(View: VidQues)
+                t.presentPoints(VidQues, mainText: "+30")
+            }
         } else {
-            txtTableDel.submit()
+            if txtTableDel.submit() {
+                var t = pointsView(View: view)
+                t.presentPoints(view, mainText: "+30")
+            }
         }
     }
-    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(true)
+        youtubeVid.loadHTMLString("", baseURL: nil)
+    }
+    override func viewDidAppear(animated: Bool) {
+        if segmentedControl.selectedSegmentIndex == 1{
+            VidQues.hidden = false
+            TextQues.hidden = true
+            webView.start(youtubeVid, width: view.frame.width, url: "https://www.youtube.com/embed/rgNf8nsXA0Q?rel=0&amp;controls=0&amp;showinfo=0")
+        }
+    }
     override func viewDidLoad(){
         vidQTable.dataSource = vidTableDel
         vidQTable.delegate = vidTableDel
         textQTable.dataSource = txtTableDel
         textQTable.delegate = txtTableDel
         youtubeVid.delegate=self
-        vidTableDel.askQuestion(vidQTable, question: "What is Diabetes?", options: ["Low Blood Glucose", "Overproduction of Insulin", "Underproduction of Insulin, leading to high glucose", "High Cholesterol"], correctIndex: 2)
-        txtTableDel.askQuestion(textQTable, question: "What is Diabetes?", options: ["Low Blood Glucose", "Overproduction of Insulin", "Underproduction of Insulin, leading to high glucose", "High Cholesterol"], correctIndex: 2)
+        youtubeVid.hidden = true
+        vidTableDel.askQuestion(vidQTable, question: "______________ can injure nerve fibers throughout your body", options: ["High Blood Sugar", "Low Blood Sugar", "HDL Cholesterol", "Too much exercise"], correctIndex: 0)
+        txtTableDel.askQuestion(textQTable, question: "To protect your heart and blood vessels, you should _________.", options: ["Smoke tobacco", "Eat fast food", "Get physical activity", "Forget to check your blood pressure"], correctIndex: 2)
+        youtubeVid.backgroundColor = .clearColor()
         view.addConstraint(NSLayoutConstraint(item: youtubeVid, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: view.frame.width*(315.00/560.00)))
         view.addConstraint(NSLayoutConstraint(item: youtubeVid, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: view.frame.width*(315.00/560.00)))
         self.automaticallyAdjustsScrollViewInsets = false
+        TextQues.backgroundColor = .whiteColor()
         textView.layer.borderColor = UIColor.lightGrayColor().CGColor
         textView.layer.borderWidth = 0.5
     }
@@ -74,7 +101,6 @@ class webView:UIWebView {
         super.init(frame: CGRectZero)
         self.superview?.frame
         self.scrollView.scrollEnabled = false
-        self.scrollView.backgroundColor = UIColor.whiteColor()
         self.loadHTMLString("<style>body,html,iframe{margin:0;padding:0; border-style:none;}</style> <iframe webkit-playsinline id=\"video\" \"width=\"\(self.superview!.frame.size.width)\" height=\"\(self.superview!.frame.size.width*(315.00/560.00))\" src=\"\(url)\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: nil)
         self.allowsInlineMediaPlayback = true
     }
@@ -83,11 +109,8 @@ class webView:UIWebView {
         fatalError("init(coder:) has not been implemented")
     }
     class func start(view:UIWebView, width:CGFloat, url:String) {
-        view.superview?.frame
         view.scrollView.scrollEnabled = false
-        view.scrollView.backgroundColor = UIColor.whiteColor()
         view.loadHTMLString("<style>body,html,iframe{margin:0;padding:0; border-style:none;}</style> <iframe id=\"video\" webkit-playsinline width=\"\(width)\" height=\"\(width*(315.00/560.00))\" src=\"\(url)\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: nil)
         view.allowsInlineMediaPlayback = true
     }
-    
 }
